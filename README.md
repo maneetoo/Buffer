@@ -1,13 +1,11 @@
 # <h1 align="center">Buffer</h1>
 <h1 align="center">Next-Gen Binary Serialiser for Roblox (Luau). Encodes almost every Roblox/Lua value type into a binary buffer with tags.</h1>
 
----
-
-
 ## Downoload
 [Downoload on Roblox Creator Store](https://create.roblox.com/store/asset/96592288854226/)
 
----
+## Official Wiki (Still In Dev)
+[Jump](https://maneetoo.github.io/Buffer/)
 
 ## Features
 
@@ -18,8 +16,6 @@
 - **Compression**: LZ4, ZSTD, and Deflate with automatic mode selection
 - **Async API**: Non-blocking encode/decode for large data structures
 - **Zero-copy streaming**: Stream multiple values into a single buffer
-
----
 
 ## Quick Start
 
