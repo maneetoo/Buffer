@@ -1,0 +1,18 @@
+{
+  "workspace": {
+    "library": ["src"],
+    "maxPreload": 2000,
+    "preloadFileSize": 500
+  },
+  "runtime": {
+    "version": "Lua 5.1",
+    "path": ["?.lua", "?/init.lua", "src/?.luau", "src/?/init.luau"]
+  },
+  "diagnostics": {
+    "globals": ["workspace", "game", "script"],
+    "disable": ["lowercase-global"]
+  },
+  "telemetry": {
+    "enable": false
+  }
+}

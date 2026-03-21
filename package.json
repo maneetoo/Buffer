@@ -1,0 +1,68 @@
+{
+  "name": "buffer",
+  "version": "1.0.0",
+  "description": "Next-Gen Binary Serializer for Roblox (Luau) - Encodes almost every Roblox/Lua value type into a binary buffer with tags",
+  "main": "src/init.luau",
+  "types": "src/Types.luau",
+  "files": [
+    "src/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "lint": "luacheck src/ tests/ --config .luacheckrc",
+    "lint:fix": "luacheck src/ tests/ --config .luacheckrc --fix",
+    "format": "stylua src/ tests/",
+    "format:check": "stylua --check src/ tests/",
+    "test": "lua tests/runner.lua",
+    "test:coverage": "lua tests/runner.lua --coverage",
+    "bench": "lua tests/benchmarks/run.lua",
+    "docs": "mkdocs build",
+    "docs:serve": "mkdocs serve",
+    "docs:deploy": "mkdocs gh-deploy --force",
+    "build": "echo 'No build step needed - pure Luau module'",
+    "build:example": "rojo build -o out/example.rbxlx example.project.json",
+    "prepublishOnly": "npm run lint && npm run test",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major",
+    "postrelease": "git push --follow-tags origin main && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maneetoo/Buffer.git"
+  },
+  "keywords": [
+    "luau",
+    "roblox",
+    "serialization",
+    "buffer",
+    "binary",
+    "encoding",
+    "decoding",
+    "datastore",
+    "networking"
+  ],
+  "author": {
+    "name": "maneetoo",
+    "url": "https://github.com/maneetoo"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/maneetoo/Buffer/issues"
+  },
+  "homepage": "https://maneetoo.github.io/Buffer/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "luacheck": "^1.0.0",
+    "stylua": "^0.20.0",
+    "standard-version": "^9.5.0",
+    "mkdocs-material": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,61 @@
+site_name: Buffer
+site_description: Next-Gen Binary Serialiser for Roblox (Luau).
+site_author: maneetoo
+site_url: https://maneetoo.github.io/Buffer/
+repo_name: maneetoo/Buffer
+repo_url: https://github.com/maneetoo/Buffer
+
+
+copyright: Copyright &copy; 2026 @maneetoo. All rights reserved.
+
+
+theme:
+  icon:
+    logo: simple/buffer
+  name: material
+  features:
+    #- navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    # Dark Theme
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+    # Light Theme
+    - scheme: blue-grey
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  highlightjs: true
+  hljs_languages:
+    - lua
+    - luau
+
+nav:
+  - Home: index.md
+  - API: API/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+extra: 
+  social:
+    - icon: simple/github
+      link: https://github.com/maneetoo
+    - icon: simple/youtube
+      link: https://www.youtube.com/@manee_too
