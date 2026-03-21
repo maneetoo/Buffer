@@ -18,7 +18,7 @@
 
 ## Installation
 
-Copy the `Buffer` module into your project. Requires Luau with buffer support (Roblox Studio, Luau CLI).
+You can grab module here: https://create.roblox.com/store/asset/96592288854226/
 
 ## Quick Start
 
