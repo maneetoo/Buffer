@@ -1,0 +1,2799 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Next-Gen Binary Serialiser for Roblox (Luau).">
+      
+      
+        <meta name="author" content="maneetoo">
+      
+      
+        <link rel="canonical" href="https://maneetoo.github.io/Buffer/API/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>API - Buffer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Buffer" class="md-header__button md-logo" aria-label="Buffer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.371 5.476 11.943 0l10.686 5.476-10.686 5.495zm3.36 4.81 7.212 3.547 7.288-3.547 3.398 1.655-10.686 5.202L1.371 11.94zm0 6.171 7.212 3.911 7.288-3.91 3.398 1.815L11.943 24 1.371 18.273z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Buffer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="blue-grey" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/maneetoo/Buffer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maneetoo/Buffer
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Buffer" class="md-nav__button md-logo" aria-label="Buffer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.371 5.476 11.943 0l10.686 5.476-10.686 5.495zm3.36 4.81 7.212 3.547 7.288-3.547 3.398 1.655-10.686 5.202L1.371 11.94zm0 6.171 7.212 3.911 7.288-3.91 3.398 1.815L11.943 24 1.371 18.273z"/></svg>
+
+    </a>
+    Buffer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/maneetoo/Buffer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maneetoo/Buffer
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Encode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Decode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffersafedecode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.SafeDecode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodesafe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeSafe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodewith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeWith
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodewithpolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeWithPolicy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema System
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodeschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeSchema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecodeschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DecodeSchema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffervalidateschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.ValidateSchema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buffertypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buffer.Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typesany" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.any()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesexact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.exact()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesnumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.number()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesnumberrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.numberRange()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesinteger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.integer()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.string()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesboolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.boolean()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.array()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesunion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.union()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesoptional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.optional()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesliteral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.literal()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-deltas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Deltas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Deltas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodeschemadelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeSchemaDelta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecodeschemadelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DecodeSchemaDelta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Migration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrationmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MigrationMap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffermigrateschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.MigrateSchema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodecompressed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeCompressed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffersetcompressiondict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.SetCompressionDict
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Registry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferregisterinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.RegisterInstance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferunregisterinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.UnregisterInstance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customtype-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CustomType Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferregistertype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.RegisterType
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Encoding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodedelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeDelta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferapplydelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.ApplyDelta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffercreatestream" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.CreateStream
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asynchronous-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asynchronous Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asynchronous Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asynchandle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AsyncHandle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodeasync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeAsync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecodeasync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DecodeAsync
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conversions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodetobase64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeToBase64
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecodefrombase64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DecodeFromBase64
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferbuffertobase64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.BufferToBase64
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferbase64tobuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Base64ToBuffer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffertojson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.ToJSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferfromjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.FromJSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-introspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging &amp; Introspection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging &amp; Introspection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buffervisualize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Visualize
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffervisualizeentropy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.VisualizeEntropy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdetectdataclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DetectDataClass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferinvalidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Invalidate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodedsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodedSize
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utility Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buffertypes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffercustombytype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.CustomByType
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Encode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Decode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffersafedecode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.SafeDecode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodesafe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeSafe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodewith" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeWith
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodewithpolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeWithPolicy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema System
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodeschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeSchema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecodeschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DecodeSchema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffervalidateschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.ValidateSchema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buffertypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buffer.Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typesany" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.any()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesexact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.exact()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesnumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.number()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesnumberrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.numberRange()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesinteger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.integer()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.string()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesboolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.boolean()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.array()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesunion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.union()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesoptional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.optional()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typesliteral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types.literal()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-deltas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Deltas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Deltas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodeschemadelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeSchemaDelta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecodeschemadelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DecodeSchemaDelta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Migration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrationmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MigrationMap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffermigrateschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.MigrateSchema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodecompressed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeCompressed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffersetcompressiondict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.SetCompressionDict
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Registry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instance Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferregisterinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.RegisterInstance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferunregisterinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.UnregisterInstance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customtype-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CustomType Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferregistertype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.RegisterType
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Encoding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodedelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeDelta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferapplydelta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.ApplyDelta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffercreatestream" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.CreateStream
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asynchronous-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asynchronous Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asynchronous Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asynchandle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AsyncHandle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodeasync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeAsync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecodeasync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DecodeAsync
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conversions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodetobase64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodeToBase64
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdecodefrombase64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DecodeFromBase64
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferbuffertobase64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.BufferToBase64
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferbase64tobuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Base64ToBuffer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffertojson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.ToJSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferfromjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.FromJSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-introspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging &amp; Introspection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging &amp; Introspection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buffervisualize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Visualize
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffervisualizeentropy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.VisualizeEntropy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferdetectdataclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.DetectDataClass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferinvalidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Invalidate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bufferencodedsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.EncodedSize
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utility Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buffertypes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffercustombytype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buffer.CustomByType
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="api-reference"><h1 align="center">API Reference</h1></h1>
+<h2 id="overview">Overview</h2>
+<p>Buffer encodes almost every Roblox/Luau value type into a compact binary format with type tags. It features multi-tiered LRU caching, schema validation, delta encoding, compression, and async processing for large data structures.</p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>All methods that return <code>(buffer?, string?)</code> return an error message as the second return value on failure. Use <code>SafeDecode</code> to handle untrusted input without throwing.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The buffer returned from <code>Encode</code> is immutable for the purpose of caching. Do not modify it directly.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Encoding <code>nil</code> as a root value is not supported and will return an error. To encode a "null" value, wrap it in a table (e.g., <code>{value = nil}</code>).</p>
+</div>
+<hr />
+<h2 id="core-api">Core API</h2>
+<h3 id="bufferencode">Buffer.Encode</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">errorMsg</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Encodes any supported value into a binary buffer. Non-table results (booleans, numbers, strings under 1000 bytes) are automatically cached in the "warm" LRU tier.</p>
+<p><strong>Returns:</strong></p>
+<p>On success: <code>buffer</code> — the encoded binary data;
+On failure: <code>nil, errorMsg</code> — descriptive error message</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Encode</span><span class="p">({</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">})</span>
+<span class="kr">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nv">buffer</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">warn</span><span class="p">(</span><span class="s2">&quot;Encoding failed:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">return</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>nil</code> as a root value is not supported. To encode a null, wrap it in a table: <code>{ value = nil }</code>.</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Tables are <strong>not</strong> automatically cached due to mutability. Use <code>EncodeWithPolicy</code> for table caching.</p>
+</div>
+<hr />
+<h3 id="bufferdecode">Buffer.Decode</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">any</span>
+</code></pre></div>
+<p>Decodes a buffer back into a value. Throws an error if the buffer is corrupt or malformed.</p>
+<p><strong>Parameters:</strong>
+<code>b: buffer</code> — the encoded binary data</p>
+<p><strong>Returns:</strong> The decoded value</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nv">buffer</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">value</span><span class="p">.</span><span class="py">player</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">.</span><span class="py">score</span><span class="p">)</span><span class="w"> </span><span class="c1">-- &quot;John&quot;, 1000</span>
+</code></pre></div></p>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>This method <strong>throws</strong> on error. Always use <code>SafeDecode</code> for untrusted input.</p>
+</div>
+<hr />
+<h3 id="buffersafedecode">Buffer.SafeDecode</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">SafeDecode</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">,</span><span class="w"> </span><span class="nv">errorMsg</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Decodes a buffer safely, returning an error message instead of throwing. Ideal for handling network data, file input, or external sources.</p>
+<p><strong>Parameters:</strong>
+<code>b: buffer</code> — the encoded binary data</p>
+<p><strong>Returns:</strong>
+On success: <code>value, nil</code>;
+On failure: <code>nil, errorMsg</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">SafeDecode</span><span class="p">(</span><span class="nv">untrustedBuffer</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Corrupt data:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">return</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Even with SafeDecode, malformed data can cause the decoder to return unexpected but valid Lua values. Always validate the structure after decoding.</p>
+</div>
+<hr />
+<h3 id="bufferencodesafe">Buffer.EncodeSafe</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeSafe</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>A wrapper around <code>Buffer.Encode</code> that performs cycle detection on tables. Prevents infinite recursion from self-referential structures.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">cycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="nv">cycle</span><span class="p">.</span><span class="py">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">cycle</span><span class="w"> </span><span class="c1">-- Cyclic reference</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeSafe</span><span class="p">(</span><span class="nv">cycle</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nv">buffer</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cannot encode cycles:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="p">)</span><span class="w"> </span><span class="c1">-- &quot;cyclic reference at root.self&quot;</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Standard <code>Buffer.Encode</code> will crash on cyclic tables. Always use <code>EncodeSafe</code> when the table structure is unknown or untrusted.</p>
+</div>
+<hr />
+<h3 id="bufferencodewith">Buffer.EncodeWith</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeWith</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">,</span><span class="w"> </span><span class="nv">priority</span><span class="p">:</span><span class="w"> </span><span class="err">&quot;</span><span class="py">hot</span><span class="s2">&quot; | &quot;</span><span class="nv">warm</span><span class="s2">&quot; | &quot;</span><span class="nv">cold</span><span class="s2">&quot;) -&gt; (buffer?, string?)</span>
+</code></pre></div>
+<p>Encodes a value with a specific cache tier priority. Overrides the default caching behavior.</p>
+<p><strong>Cache Tiers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Capacity</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"hot"</code></td>
+<td>100</td>
+<td>Values that change every frame (player positions, current state)</td>
+</tr>
+<tr>
+<td><code>"warm"</code></td>
+<td>500</td>
+<td>Default tier; general-purpose caching</td>
+</tr>
+<tr>
+<td><code>"cold"</code></td>
+<td>2000</td>
+<td>Large, infrequently accessed values (static data, configuration)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Player position changes every frame — use hot cache</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">posBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeWith</span><span class="p">(</span><span class="nv">player</span><span class="p">.</span><span class="py">Position</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;hot&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- EXAMPLE!!!</span>
+
+<span class="c1">-- Game configuration rarely changes — use cold cache</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">configBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeWith</span><span class="p">(</span><span class="nv">gameConfig</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;cold&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Cache is keyed by value equality, not reference. Two different tables with identical contents will share a cache entry.</p>
+</div>
+<hr />
+<h3 id="bufferencodewithpolicy">Buffer.EncodeWithPolicy</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeWithPolicy</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">,</span><span class="w"> </span><span class="nv">policy</span><span class="p">:</span><span class="w"> </span><span class="err">&quot;</span><span class="py">never</span><span class="s2">&quot; | &quot;</span><span class="nv">always</span><span class="s2">&quot; | &quot;</span><span class="kr">if</span><span class="o">-</span><span class="nv">shallow</span><span class="s2">&quot;) -&gt; (buffer?, string?)</span>
+</code></pre></div>
+<p>Applies a caching policy specifically for table values. This is the only way to cache tables.</p>
+<p><strong>Policies:</strong>
+<code>"never"</code> — Do not cache the table (default behavior)
+<code>"always"</code> — Cache based on a fast content hash of the table's <strong>entire</strong> contents
+<code>"if-shallow"</code> — Cache only if the table contains no nested tables (shallow tables only)</p>
+<p><strong>Important:</strong> 
+<code>"always"</code> computes a hash of all key-value pairs. This is safe <strong>only for immutable tables</strong> (tables that never change).
+<code>"if-shallow"</code> is ideal for configuration tables, settings, or any table without nested structures.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Immutable static data — safe to always cache</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">staticData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;config&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">buffer1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeWithPolicy</span><span class="p">(</span><span class="nv">staticData</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;always&quot;</span><span class="p">)</span>
+
+<span class="c1">-- Nested table — &quot;if-shallow&quot; won&#39;t cache this</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">nested</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">buffer2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeWithPolicy</span><span class="p">(</span><span class="nv">nested</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;if-shallow&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- No caching</span>
+
+<span class="c1">-- Shallow table — will be cached</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">shallow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="nv">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">buffer3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeWithPolicy</span><span class="p">(</span><span class="nv">shallow</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;if-shallow&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Cached</span>
+</code></pre></div></p>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Using <code>"always"</code> on mutable tables can lead to stale cache entries. Only use this policy for tables that never change after encoding.</p>
+</div>
+<hr />
+<h2 id="schema-system">Schema System</h2>
+<p>Schemas provide type safety and structure validation for your data. They're ideal for network protocols, configuration files, and any data that must adhere to a known format. It takes up as little space as possible</p>
+<h3 id="schema-definition">Schema Definition</h3>
+<p>A schema is a table with a <code>version</code> (optional, 1-255) and a <code>fields</code> array:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="w"> </span><span class="nv">Schema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">version</span><span class="err">?</span><span class="p">:</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">fields</span><span class="p">:</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="py">name</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
+<span class="w">        </span><span class="nb">type</span><span class="p">:</span><span class="w"> </span><span class="nv">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">SchemaType</span><span class="p">,</span>
+<span class="w">        </span><span class="nv">optional</span><span class="err">?</span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span><span class="p">,</span>
+<span class="w">        </span><span class="nv">default</span><span class="err">?</span><span class="p">:</span><span class="w"> </span><span class="nv">any</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}[]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Example Schema:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">playerSchema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;level&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">optional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;inventory&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">string</span><span class="p">())</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;lastLogin&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;DateTime&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">optional</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">DateTime</span><span class="p">.</span><span class="nf">now</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="bufferencodeschema">Buffer.EncodeSchema</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeSchema</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nv">schema</span><span class="p">:</span><span class="w"> </span><span class="py">Schema</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Encodes a value according to a schema, performing validation before encoding.</p>
+<p><strong>Validations performed:</strong>
+Required fields exist
+Field types match schema definition
+Custom validators (if using <code>Buffer.Types</code>) pass</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">playerData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">inventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;sword&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;shield&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeSchema</span><span class="p">(</span><span class="nv">playerData</span><span class="p">,</span><span class="w"> </span><span class="nv">playerSchema</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nv">buffer</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validation failed:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="p">)</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<h3 id="bufferdecodeschema">Buffer.DecodeSchema</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DecodeSchema</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">schema</span><span class="p">:</span><span class="w"> </span><span class="py">Schema</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="p">[</span><span class="nv">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">}</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Decodes a buffer according to a schema. Returns a table with all fields populated, using defaults for optional fields if they're missing from the encoded data.</p>
+<p><strong>Behavior:</strong>
+Fields not present in the buffer use the schema's <code>default</code> value (if specified)
+Missing required fields return an error
+Type validation is performed on all decoded values</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">data</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DecodeSchema</span><span class="p">(</span><span class="nv">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">playerSchema</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">data</span><span class="p">.</span><span class="py">name</span><span class="p">,</span><span class="w"> </span><span class="nv">data</span><span class="p">.</span><span class="py">level</span><span class="p">)</span><span class="w"> </span><span class="c1">-- &quot;John&quot;, 42</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">data</span><span class="p">.</span><span class="py">lastLogin</span><span class="p">)</span><span class="w"> </span><span class="c1">-- DateTime.now() (default)</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<h3 id="buffervalidateschema">Buffer.ValidateSchema</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">ValidateSchema</span><span class="p">(</span><span class="nv">schema</span><span class="p">:</span><span class="w"> </span><span class="py">Schema</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">boolean</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Validates a schema definition without encoding any data.</p>
+<p><strong>Validates:</strong>
+<code>fields</code> is an array
+Each field has a non-empty <code>name</code>
+Field names are unique
+Field <code>type</code> is a valid string or <code>SchemaType</code> object
+Optional fields with defaults are properly marked</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">ok</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">ValidateSchema</span><span class="p">(</span><span class="nv">playerSchema</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nv">ok</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">error</span><span class="p">(</span><span class="s2">&quot;Invalid schema: &quot;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">err</span><span class="p">)</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>A schema must have at least one field. Empty schemas are rejected.</p>
+</div>
+<hr />
+<h2 id="buffertypes">Buffer.Types</h2>
+<p><code>Buffer.Types</code> provides factory functions for creating type validators used in schemas.</p>
+<h3 id="typesany">Types.any()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">any</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts any value. Useful for polymorphic fields.</p>
+<h3 id="typesexact">Types.exact()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">exact</span><span class="p">(</span><span class="nv">typeofStr</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Requires the value to have exactly the given <code>typeof()</code> result.</p>
+<h3 id="typesnumber">Types.number()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">number</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts any Lua number.</p>
+<h3 id="typesnumberrange">Types.numberRange()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">numberRange</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">,</span><span class="w"> </span><span class="nv">max</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts numbers within the inclusive range <code>[min, max]</code>.</p>
+<h3 id="typesinteger">Types.integer()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">integer</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts whole numbers (no fractional part).</p>
+<h3 id="typesstring">Types.string()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">string</span><span class="p">(</span><span class="nv">maxLen</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts strings. Optionally enforces a maximum length.</p>
+<h3 id="typesboolean">Types.boolean()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">boolean</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts boolean values.</p>
+<h3 id="typesarray">Types.array()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="nv">elementType</span><span class="p">:</span><span class="w"> </span><span class="py">SchemaType</span><span class="p">,</span><span class="w"> </span><span class="nv">maxLen</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts Lua sequences (contiguous integer keys starting from 1). Validates each element against <code>elementType</code>. Optionally enforces maximum length.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">stringArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">string</span><span class="p">())</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">numberArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">numberRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">),</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="typesunion">Types.union()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">union</span><span class="p">(...:</span><span class="w"> </span><span class="nv">SchemaType</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts values that match any of the provided types.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">stringOrNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">union</span><span class="p">(</span>
+<span class="w">    </span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">string</span><span class="p">(),</span>
+<span class="w">    </span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">number</span><span class="p">()</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<h3 id="typesoptional">Types.optional()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">optional</span><span class="p">(</span><span class="nv">inner</span><span class="p">:</span><span class="w"> </span><span class="py">SchemaType</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts either <code>nil</code> or a value matching the inner type.</p>
+<h3 id="typesliteral">Types.literal()</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">literal</span><span class="p">(...:</span><span class="w"> </span><span class="nv">any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">SchemaType</span>
+</code></pre></div>
+<p>Accepts only the exact literal values provided.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="py">Types</span><span class="p">.</span><span class="nf">literal</span><span class="p">(</span><span class="s2">&quot;up&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;down&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="schema-deltas">Schema Deltas</h2>
+<p>Deltas encode only the differences between two schema-compliant tables, significantly reducing storage and transmission size for incremental updates.</p>
+<h3 id="bufferencodeschemadelta">Buffer.EncodeSchemaDelta</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeSchemaDelta</span><span class="p">(</span>
+<span class="w">    </span><span class="nv">old</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nv">new</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nv">schema</span><span class="p">:</span><span class="w"> </span><span class="py">Schema</span>
+<span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Encodes only the fields that differ between <code>old</code> and <code>new</code>. Uses a bitmask to indicate which fields changed.</p>
+<p><strong>Requirements:</strong>
+Both <code>old</code> and <code>new</code> must be valid against the schema
+Fields with <code>nil</code> in <code>new</code> are considered unchanged (not encoded)</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">old</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c1">-- Only encodes the &#39;level&#39; field (changed from 42 to 43)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">delta</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeSchemaDelta</span><span class="p">(</span><span class="nv">old</span><span class="p">,</span><span class="w"> </span><span class="nv">new</span><span class="p">,</span><span class="w"> </span><span class="nv">playerSchema</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>The encoded delta is typically much smaller than re-encoding the entire <code>new</code> table, especially when few fields change.</p>
+</div>
+<h3 id="bufferdecodeschemadelta">Buffer.DecodeSchemaDelta</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DecodeSchemaDelta</span><span class="p">(</span>
+<span class="w">    </span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">current</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nv">schema</span><span class="p">:</span><span class="w"> </span><span class="py">Schema</span>
+<span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="p">[</span><span class="nv">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">}</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Applies a delta buffer to the <code>current</code> table, updating it with the changes. The table is modified in-place.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- current is { name = &quot;John&quot;, level = 42, score = 1000 }</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">updated</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DecodeSchemaDelta</span><span class="p">(</span><span class="nv">deltaBuffer</span><span class="p">,</span><span class="w"> </span><span class="nv">current</span><span class="p">,</span><span class="w"> </span><span class="nv">playerSchema</span><span class="p">)</span>
+<span class="c1">-- updated.level is now 43</span>
+</code></pre></div></p>
+<hr />
+<h2 id="schema-migration">Schema Migration</h2>
+<p>When your schema evolves over time, migrations allow you to transform older data versions to the latest format.</p>
+<h3 id="migrationmap">MigrationMap</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="w"> </span><span class="nv">MigrationMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">[</span><span class="nv">fromVersion</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">]:</span><span class="w"> </span><span class="p">(</span><span class="nv">data</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">[</span><span class="nv">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>A table mapping a version number to a migration function. The function receives data in the old format and returns data in the new format for the <strong>next</strong> version.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">migrations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">data</span><span class="p">)</span>
+<span class="w">        </span><span class="c1">-- Version 1 → Version 2: Add default inventory</span>
+<span class="w">        </span><span class="nv">data</span><span class="p">.</span><span class="py">inventory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">data</span><span class="p">.</span><span class="py">inventory</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="nv">data</span>
+<span class="w">    </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">data</span><span class="p">)</span>
+<span class="w">        </span><span class="c1">-- Version 2 → Version 3: Rename &#39;xp&#39; to &#39;experience&#39;</span>
+<span class="w">        </span><span class="nv">data</span><span class="p">.</span><span class="py">experience</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">data</span><span class="p">.</span><span class="py">xp</span>
+<span class="w">        </span><span class="nv">data</span><span class="p">.</span><span class="py">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">nil</span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="nv">data</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="buffermigrateschema">Buffer.MigrateSchema</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">MigrateSchema</span><span class="p">(</span>
+<span class="w">    </span><span class="nv">data</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nv">fromVersion</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">toVersion</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">migrations</span><span class="p">:</span><span class="w"> </span><span class="py">MigrationMap</span>
+<span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="p">[</span><span class="nv">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">}</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Applies the necessary migration steps to transform data from <code>fromVersion</code> to <code>toVersion</code>. The original data is not modified.</p>
+<p><strong>Returns:</strong>
+On success: the migrated data table
+On failure: <code>nil, errorMsg</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">oldData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">-- Version 1</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">migrated</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">MigrateSchema</span><span class="p">(</span><span class="nv">oldData</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nv">migrations</span><span class="p">)</span>
+<span class="c1">-- migrated now has: { name = &quot;John&quot;, experience = 100, inventory = {} }</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Migrations are applied sequentially. You cannot skip versions or downgrade (fromVersion must be less than toVersion).</p>
+</div>
+<hr />
+<h2 id="compression">Compression</h2>
+<p>Buffer supports transparent compression using LZ4, Deflate, and Zstd algorithms.</p>
+<h3 id="bufferencodecompressed">Buffer.EncodeCompressed</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeCompressed</span><span class="p">(</span>
+<span class="w">    </span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">mode</span><span class="p">:</span><span class="w"> </span><span class="py">CompressionMode</span><span class="err">?</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">hint</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span>
+<span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Encodes a value and compresses the resulting buffer. The compression method is stored as a tag in the output, allowing <code>Buffer.Decode</code> to decompress automatically.</p>
+<p><strong>Compression Modes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"auto"</code></td>
+<td>Automatically selects the best algorithm based on data size and entropy (default)</td>
+</tr>
+<tr>
+<td><code>"lz4"</code></td>
+<td>Fast compression/decompression, moderate ratio</td>
+</tr>
+<tr>
+<td><code>"deflate"</code></td>
+<td>Balanced compression, widely compatible</td>
+</tr>
+<tr>
+<td><code>"zstd"</code></td>
+<td>High compression ratio, good speed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hints:</strong>
+<code>"binary"</code> — Data is binary (e.g., images, custom formats)
+<code>"text"</code> — Data is human-readable text
+<code>"json"</code> — Data is JSON-like</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Auto-select best compression</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">compressed</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeCompressed</span><span class="p">(</span><span class="nv">hugeTable</span><span class="p">)</span>
+
+<span class="c1">-- Force Zstd with binary hint</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">compressed</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeCompressed</span><span class="p">(</span><span class="nv">largeData</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;zstd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;binary&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>The output buffer can be passed directly to <code>Buffer.Decode</code> — decompression happens automatically.</p>
+</div>
+<h3 id="buffersetcompressiondict">Buffer.SetCompressionDict</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">SetCompressionDict</span><span class="p">(</span><span class="nv">dict</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span>
+</code></pre></div>
+<p>Sets a custom dictionary for LZ4 and Zstd compression. Dictionaries can significantly improve compression ratios for small, repetitive data by providing a common pattern base.</p>
+<p><strong>Use cases:</strong>
+Game state snapshots with known structure
+Network packets with repeated headers
+Configuration files with common keys</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Encode</span><span class="p">({</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;position&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;rotation&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">-- Common field names</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;player&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;npc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;item&quot;</span><span class="w"> </span><span class="p">}</span><span class="w">             </span><span class="c1">-- Common object types</span>
+<span class="p">})</span>
+<span class="nv">Buffer</span><span class="p">.</span><span class="nf">SetCompressionDict</span><span class="p">(</span><span class="nv">dict</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The dictionary must be identical for compression and decompression. Include it in your game's assets or transmit it with the data.</p>
+</div>
+<hr />
+<h2 id="instance-registry">Instance Registry</h2>
+<p>Roblox Instances are encoded as numeric IDs (u32) rather than full objects. This requires a registry to map IDs to instances.</p>
+<h3 id="bufferregisterinstance">Buffer.RegisterInstance</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">RegisterInstance</span><span class="p">(</span><span class="nv">instance</span><span class="p">:</span><span class="w"> </span><span class="py">Instance</span><span class="p">,</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">)</span>
+</code></pre></div>
+<p>Registers an instance with a numeric ID. The decoder uses the same ID to look up the instance.</p>
+<p><strong>Requirements:</strong>
+ID must be between 0 and 0xFFFFFFFF (u32 range)
+Each instance can have only one ID
+IDs must be unique</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">.</span><span class="py">Players</span><span class="p">.</span><span class="py">LocalPlayer</span>
+<span class="nv">Buffer</span><span class="p">.</span><span class="nf">RegisterInstance</span><span class="p">(</span><span class="nv">player</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">-- Now player can be encoded and decoded</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="nv">player</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">decoded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Decode</span><span class="p">(</span><span class="nv">buffer</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Returns the same player instance</span>
+</code></pre></div></p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>The library automatically unregisters instances when they're destroyed (using the <code>Destroying</code> event). No manual cleanup is needed.</p>
+</div>
+<h3 id="bufferunregisterinstance">Buffer.UnregisterInstance</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">UnregisterInstance</span><span class="p">(</span><span class="nv">instance</span><span class="p">:</span><span class="w"> </span><span class="py">Instance</span><span class="p">)</span>
+</code></pre></div>
+<p>Manually unregisters an instance. This is automatically handled by the library, but can be used for explicit cleanup.</p>
+<hr />
+<h2 id="custom-types">Custom Types</h2>
+<p>You can extend Buffer to support custom Roblox or Lua types by registering a custom encoder/decoder.</p>
+<h3 id="customtype-definition">CustomType Definition</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="w"> </span><span class="nv">CustomType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">encode</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">BB</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">number</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">),</span>
+<span class="w">    </span><span class="nv">decode</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">any</span><span class="p">,</span><span class="w"> </span><span class="nv">number</span><span class="p">),</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>encode</strong>: Writes the value to the buffer at <code>offset</code>. Returns the new offset or <code>nil, error</code>.</li>
+<li><strong>decode</strong>: Reads a value from the buffer at <code>offset</code>. Returns <code>(value, newOffset)</code>.</li>
+</ul>
+<h3 id="bufferregistertype">Buffer.RegisterType</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">RegisterType</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">,</span><span class="w"> </span><span class="nv">ct</span><span class="p">:</span><span class="w"> </span><span class="py">CustomType</span><span class="p">)</span>
+</code></pre></div>
+<p>Registers a custom type with a numeric ID (0-254). IDs 0-127 are reserved for future library use.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Custom type for UDim2 (though already supported)</span>
+<span class="nv">Buffer</span><span class="p">.</span><span class="nf">RegisterType</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nv">encode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">BB</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="p">)</span>
+<span class="w">        </span><span class="nf">buf_writeu8</span><span class="p">(</span><span class="nv">BB</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="p">,</span><span class="w"> </span><span class="nv">T_UDIM2</span><span class="p">)</span>
+<span class="w">        </span><span class="nf">buf_writef32</span><span class="p">(</span><span class="nv">BB</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">.</span><span class="py">X</span><span class="p">.</span><span class="py">Scale</span><span class="p">)</span>
+<span class="w">        </span><span class="nf">buf_writei32</span><span class="p">(</span><span class="nv">BB</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">.</span><span class="py">X</span><span class="p">.</span><span class="py">Offset</span><span class="p">)</span>
+<span class="w">        </span><span class="nf">buf_writef32</span><span class="p">(</span><span class="nv">BB</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">.</span><span class="py">Y</span><span class="p">.</span><span class="py">Scale</span><span class="p">)</span>
+<span class="w">        </span><span class="nf">buf_writei32</span><span class="p">(</span><span class="nv">BB</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="o">+</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">.</span><span class="py">Y</span><span class="p">.</span><span class="py">Offset</span><span class="p">)</span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="nv">offset</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<span class="w">    </span><span class="kr">end</span><span class="p">,</span>
+<span class="w">    </span><span class="nv">decode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="p">)</span>
+<span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+<span class="w">            </span><span class="nf">buf_readf32</span><span class="p">(</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="p">),</span>
+<span class="w">            </span><span class="nf">buf_readi32</span><span class="p">(</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="o">+</span><span class="mi">4</span><span class="p">),</span>
+<span class="w">            </span><span class="nf">buf_readf32</span><span class="p">(</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="o">+</span><span class="mi">8</span><span class="p">),</span>
+<span class="w">            </span><span class="nf">buf_readi32</span><span class="p">(</span><span class="nv">b</span><span class="p">,</span><span class="w"> </span><span class="nv">offset</span><span class="o">+</span><span class="mi">12</span><span class="p">)</span>
+<span class="w">        </span><span class="p">),</span><span class="w"> </span><span class="nv">offset</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">16</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="p">})</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Custom type IDs must be unique. Registering with an existing ID will overwrite it.</p>
+</div>
+<hr />
+<h2 id="advanced-encoding">Advanced Encoding</h2>
+<h3 id="bufferencodedelta">Buffer.EncodeDelta</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeDelta</span><span class="p">(</span><span class="nv">old</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nv">new</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Encodes a delta between two dictionaries (not schema-validated). Fields present in <code>old</code> but missing in <code>new</code> are encoded as <code>nil</code> (deleted). This is a lower-level API than schema deltas.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">old</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">-- c is deleted</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeDelta</span><span class="p">(</span><span class="nv">old</span><span class="p">,</span><span class="w"> </span><span class="nv">new</span><span class="p">)</span>
+<span class="c1">-- delta encodes: b changed to 4, c deleted (nil)</span>
+</code></pre></div></p>
+<h3 id="bufferapplydelta">Buffer.ApplyDelta</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">ApplyDelta</span><span class="p">(</span><span class="nv">target</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nv">delta</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">[</span><span class="nv">string</span><span class="p">]:</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Applies a delta buffer to a target table, modifying it in-place. Returns the target for chaining.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">}</span>
+<span class="nv">Buffer</span><span class="p">.</span><span class="nf">ApplyDelta</span><span class="p">(</span><span class="nv">target</span><span class="p">,</span><span class="w"> </span><span class="nv">deltaBuffer</span><span class="p">)</span>
+<span class="c1">-- target is now { a = 1, b = 4 } (c removed)</span>
+</code></pre></div></p>
+<h3 id="buffercreatestream">Buffer.CreateStream</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">CreateStream</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">Stream</span>
+</code></pre></div>
+<p>Creates a streaming encoder for writing multiple values sequentially. Useful for batched operations or when you don't know the final size ahead of time.</p>
+<p><strong>Stream Methods:</strong>
+- <code>stream:write(value: any) -&gt; (boolean, string?)</code> — Encode and append a value
+- <code>stream:finalize() -&gt; (buffer?, string?)</code> — Return the concatenated buffer</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">CreateStream</span><span class="p">()</span>
+<span class="nv">stream</span><span class="p">:</span><span class="nf">write</span><span class="p">({</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;player&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="w"> </span><span class="p">})</span>
+<span class="nv">stream</span><span class="p">:</span><span class="nf">write</span><span class="p">({</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;score&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">})</span>
+<span class="nv">stream</span><span class="p">:</span><span class="nf">write</span><span class="p">({</span><span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;inventory&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;sword&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">stream</span><span class="p">:</span><span class="nf">finalize</span><span class="p">()</span><span class="w"> </span><span class="c1">-- All three values concatenated</span>
+</code></pre></div></p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Once finalized, the stream cannot be written to again.</p>
+</div>
+<h2 id="asynchronous-operations">Asynchronous Operations</h2>
+<p>For large tables with thousands of fields, synchronous encoding can block the main thread. Async methods process data in chunks, yielding between batches to keep the game responsive.</p>
+<h3 id="asynchandle">AsyncHandle</h3>
+<p>Async methods return a handle with the following methods:</p>
+<ul>
+<li><code>handle:Await() -&gt; (buffer?, string?)</code> — Waits for completion and returns result</li>
+<li><code>handle:Cancel()</code> — Cancels the ongoing operation</li>
+</ul>
+<h3 id="bufferencodeasync">Buffer.EncodeAsync</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeAsync</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">AsyncHandle</span>
+</code></pre></div>
+<p>Encodes a large table asynchronously. Processes fields in chunks of <code>ASYNC_FIELDS_PER_STEP</code> (default 256), yielding between chunks.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeAsync</span><span class="p">(</span><span class="nv">largeTable</span><span class="p">)</span>
+
+<span class="c1">-- Do other work while encoding runs...</span>
+<span class="nf">updateGameState</span><span class="p">()</span>
+
+<span class="c1">-- Wait for completion when needed</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">handle</span><span class="p">:</span><span class="nf">Await</span><span class="p">()</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">buffer</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nf">saveToDataStore</span><span class="p">(</span><span class="nv">buffer</span><span class="p">)</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Async encoding only yields for tables with more than 256 fields. Small values encode synchronously.</p>
+</div>
+<h3 id="bufferdecodeasync">Buffer.DecodeAsync</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DecodeAsync</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">AsyncHandle</span>
+</code></pre></div>
+<p>Decodes a buffer asynchronously. Currently processes the entire decode in a single chunk but yields at least once.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DecodeAsync</span><span class="p">(</span><span class="nv">buffer</span><span class="p">)</span>
+
+<span class="c1">-- Wait for result</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">handle</span><span class="p">:</span><span class="nf">Await</span><span class="p">()</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decoded:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">)</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Cancelling an async operation after it completes has no effect. Cancelling during processing prevents the completion callback.</p>
+</div>
+<hr />
+<h2 id="conversions">Conversions</h2>
+<h3 id="bufferencodetobase64">Buffer.EncodeToBase64</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeToBase64</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">,</span><span class="w"> </span><span class="nv">urlSafe</span><span class="p">:</span><span class="w"> </span><span class="py">boolean</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">string</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Encodes a value and converts the binary buffer to a Base64 string. If <code>urlSafe</code> is true, uses URL-safe Base64 encoding (replaces <code>+</code> and <code>/</code> with <code>-</code> and <code>_</code>).</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">b64</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeToBase64</span><span class="p">({</span><span class="w"> </span><span class="nv">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hello&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">b64</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">b64</span><span class="p">)</span><span class="w"> </span><span class="c1">-- &quot;eyJkYXRhIjoiaGVsbG8ifQ==&quot; (or URL-safe variant)</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<h3 id="bufferdecodefrombase64">Buffer.DecodeFromBase64</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DecodeFromBase64</span><span class="p">(</span><span class="nv">s</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">any</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Decodes a Base64 string back into a value.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DecodeFromBase64</span><span class="p">(</span><span class="nv">b64String</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">value</span><span class="p">.</span><span class="py">data</span><span class="p">)</span><span class="w"> </span><span class="c1">-- &quot;hello&quot;</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<h3 id="bufferbuffertobase64">Buffer.BufferToBase64</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">BufferToBase64</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">urlSafe</span><span class="p">:</span><span class="w"> </span><span class="py">boolean</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">string</span>
+</code></pre></div>
+<p>Converts a binary buffer to a Base64 string. Throws on error.</p>
+<h3 id="bufferbase64tobuffer">Buffer.Base64ToBuffer</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Base64ToBuffer</span><span class="p">(</span><span class="nv">s</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Converts a Base64 string back into a binary buffer. Returns an error on invalid Base64.</p>
+<h3 id="buffertojson">Buffer.ToJSON</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">ToJSON</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">string</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Decodes a buffer and converts the result to a JSON string. Handles special types (Vector3, CFrame, etc.) by adding a <code>__type</code> field.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">json</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">ToJSON</span><span class="p">(</span><span class="nv">buffer</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">json</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">json</span><span class="p">)</span><span class="w"> </span><span class="c1">-- {&quot;__type&quot;:&quot;Vector3&quot;,&quot;x&quot;:1,&quot;y&quot;:2,&quot;z&quot;:3}</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<h3 id="bufferfromjson">Buffer.FromJSON</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">FromJSON</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Parses a JSON string and encodes the result. The JSON must represent a valid Lua value (no functions, userdata, etc.).</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">buffer</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">FromJSON</span><span class="p">(</span><span class="s1">&#39;{&quot;player&quot;:&quot;John&quot;,&quot;score&quot;:1000}&#39;</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">buffer</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="c1">-- buffer can now be decoded to a Lua table</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<hr />
+<h2 id="debugging-introspection">Debugging &amp; Introspection</h2>
+<h3 id="buffervisualize">Buffer.Visualize</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Visualize</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">string</span>
+</code></pre></div>
+<p>Returns a human-readable representation of the buffer's internal structure, showing byte offsets and tag names.</p>
+<p><strong>Example output:</strong>
+<div class="highlight"><pre><span></span><code>[0000] 11 STR16
+[0001] 05
+[0006] 18 ARRAY
+[0007] 03
+[0010] 02 U8
+[0011] 42
+[0012] 02 U8
+[0013] 43
+[0014] 02 U8
+[0015] 44
+</code></pre></div></p>
+<h3 id="buffervisualizeentropy">Buffer.VisualizeEntropy</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">VisualizeEntropy</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">string</span>
+</code></pre></div>
+<p>Shows the entropy distribution of a buffer, helping to choose the optimal compression algorithm.</p>
+<h3 id="bufferdetectdataclass">Buffer.DetectDataClass</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">DetectDataClass</span><span class="p">(</span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="py">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">string</span>
+</code></pre></div>
+<p>Attempts to classify the type of data in a buffer. Returns one of:
+- <code>"binary"</code> — Unknown binary data
+- <code>"text"</code> — Human-readable text
+- <code>"json"</code> — JSON-like structure
+- <code>"lz4"</code> — Already LZ4 compressed
+- <code>"zstd"</code> — Already Zstd compressed
+- <code>"deflate"</code> — Already Deflate compressed</p>
+<h3 id="bufferinvalidate">Buffer.Invalidate</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">Invalidate</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">)</span>
+</code></pre></div>
+<p>Removes a value from all cache tiers. Useful when you know a cached value is stale.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">loadConfig</span><span class="p">()</span>
+<span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodeWithPolicy</span><span class="p">(</span><span class="nv">config</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;always&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Cached</span>
+<span class="c1">-- ... later, config changes ...</span>
+<span class="nv">Buffer</span><span class="p">.</span><span class="nf">Invalidate</span><span class="p">(</span><span class="nv">config</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Clear stale cache</span>
+</code></pre></div></p>
+<h3 id="bufferencodedsize">Buffer.EncodedSize</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodedSize</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="nv">number</span><span class="err">?</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">)</span>
+</code></pre></div>
+<p>Estimates the byte size of the encoded value without allocating a final buffer. Useful for pre-allocation, validation, or checking if a value will exceed size limits.</p>
+<p><strong>Returns:</strong>
+On success: <code>number</code> — estimated size in bytes
+On failure: <code>nil, errorMsg</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">size</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Buffer</span><span class="p">.</span><span class="nf">EncodedSize</span><span class="p">(</span><span class="nv">hugeTable</span><span class="p">)</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">size</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">size</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">warn</span><span class="p">(</span><span class="s2">&quot;Table will be 1MB+ after encoding!&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+</code></pre></div></p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>This is an estimate; the actual encoded size may differ slightly due to tag overhead. The estimate is accurate within a few bytes.</p>
+</div>
+<hr />
+<hr />
+<h2 id="utility-functions">Utility Functions</h2>
+<h3 id="buffertypes_1">Buffer.Types</h3>
+<p>The <code>Buffer.Types</code> namespace contains all type factory functions. This is a reference to the <code>Types</code> module, accessible for convenience.</p>
+<h3 id="buffercustombytype">Buffer.CustomByType</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">Buffer</span><span class="p">.</span><span class="py">CustomByType</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">[</span><span class="py">string</span><span class="p">]:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">,</span><span class="w"> </span><span class="nv">ct</span><span class="p">:</span><span class="w"> </span><span class="py">CustomType</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>A table mapping type names to registered custom types. Useful for introspection.</p>
+<hr />
+<p>manee was here :)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 @maneetoo. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/maneetoo" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@manee_too" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
