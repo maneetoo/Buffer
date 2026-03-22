@@ -63,5 +63,4 @@ local decoded = Buffer.Decode(buf)
 
 ## Credits
 This module uses:
-**t** - https://github.com/osyrisrblx/t
-**Trove** - https://github.com/Sleitnick/RbxUtil/blob/main/modules/component/init.luau?ysclid=mn1gw1vbnr25173765
+**[t](https://github.com/osyrisrblx/t), [Trove](https://github.com/Sleitnick/RbxUtil/blob/main/modules/component/init.luau?ysclid=mn1gw1vbnr25173765)**
