@@ -61,6 +61,7 @@ local decoded = Buffer.Decode(buf)
 - Table keys limited to string and number types (numbers converted to strings on wire)
 - Instance references require manual registration on both sides
 
-## License
-
-Apache 2.0
+## Credits
+This module uses:
+**t** - https://github.com/osyrisrblx/t
+**Trove** - https://github.com/Sleitnick/RbxUtil/blob/main/modules/component/init.luau?ysclid=mn1gw1vbnr25173765
